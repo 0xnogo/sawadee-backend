@@ -9,7 +9,7 @@ from langchain.prompts import ChatPromptTemplate
 _ = load_dotenv(find_dotenv()) # read local .env file
 openai.api_key = os.environ['OPENAI_API_KEY']
 
-llm_model = 'gpt-4-1106-preview'
+llm_model = 'gpt-3.5-turbo-1106'
 
 def getTravelPlan(location: str):
   chat = ChatOpenAI(temperature=0.0, model=llm_model)
@@ -18,7 +18,7 @@ def getTravelPlan(location: str):
     Give me 5 tourist activities to do in {location}? \
     Your response should follow a JSON format with the location and an array of activities(name, location, description, type). \
     If you don't know the type of activity, just put "other". \
-    Stick strictly to this format even if multiple location are given, don't create a new JSON object. \
+    Stick strictly to this format even if multiple locations are given, don't create a new JSON object. \
     Example: {{location: "Paris", activities: [{{name: string, location: string, description: string, type: string}}]}} \
     """
 
