@@ -1,6 +1,6 @@
-# Your Project Name
+# sawadee-backend
 
-Brief project description here.
+Explore new countries using GPT/Langchain. This repo is the an API containing all the interactions with the GPT LLM.
 
 ## Getting Started
 
